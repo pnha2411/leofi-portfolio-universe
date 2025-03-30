@@ -3,6 +3,13 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
 const HeroSection = () => {
+  const scrollToProjects = () => {
+    const projectsSection = document.getElementById('projects');
+    if (projectsSection) {
+      projectsSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section className="pt-24 pb-12 md:pt-32 md:pb-20 relative overflow-hidden">
       {/* Minimalist background elements */}
@@ -24,6 +31,7 @@ const HeroSection = () => {
             <Button 
               size="lg" 
               className="bg-leofi-gradient hover:opacity-90 transition-opacity text-white"
+              onClick={scrollToProjects}
             >
               Explore Our Products
               <ArrowRight className="ml-2 h-4 w-4" />
@@ -32,6 +40,7 @@ const HeroSection = () => {
               size="lg" 
               variant="outline" 
               className="border-white/10 text-white hover:bg-white/5 transition-colors"
+              onClick={() => window.open('https://app.leofi.xyz/', '_blank')}
             >
               Learn More
             </Button>

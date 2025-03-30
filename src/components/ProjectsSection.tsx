@@ -15,7 +15,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     category: "finance",
     color: "bg-gradient-to-r from-leofi-red to-leofi-orange",
-    icon: <Layers className="h-6 w-6 text-white" />
+    icon: <Layers className="h-6 w-6 text-white" />,
+    link: "https://app.leofi.xyz/"
   },
   {
     id: "trackit",
@@ -25,7 +26,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1579621970795-87facc2f976d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     category: "tool",
     color: "bg-gradient-to-r from-blue-600 to-indigo-600",
-    icon: <BarChart3 className="h-6 w-6 text-white" />
+    icon: <BarChart3 className="h-6 w-6 text-white" />,
+    link: "https://trackit-app.xyz/"
   },
   {
     id: "nimpad",
@@ -35,7 +37,8 @@ const projects = [
     image: "https://images.unsplash.com/photo-1560472355-536de3962603?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
     category: "wallet",
     color: "bg-gradient-to-r from-emerald-500 to-teal-500",
-    icon: <Wallet className="h-6 w-6 text-white" />
+    icon: <Wallet className="h-6 w-6 text-white" />,
+    link: "https://wallet.nimpad.xyz/"
   }
 ];
 
@@ -117,7 +120,11 @@ const ProjectsSection = () => {
                       ))}
                     </div>
                     
-                    <Button variant="outline" className="w-full border-white/10 hover:bg-white/5 text-white mt-auto">
+                    <Button 
+                      variant="outline" 
+                      className="w-full border-white/10 hover:bg-white/5 text-white mt-auto"
+                      onClick={() => window.open(project.link, '_blank')}
+                    >
                       Learn More
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
@@ -153,7 +160,11 @@ const ProjectsSection = () => {
                         ))}
                       </div>
                       
-                      <Button variant="outline" className="w-full border-white/10 hover:bg-white/5 text-white mt-auto">
+                      <Button 
+                        variant="outline" 
+                        className="w-full border-white/10 hover:bg-white/5 text-white mt-auto"
+                        onClick={() => window.open(project.link, '_blank')}
+                      >
                         Learn More
                         <ArrowRight className="ml-2 h-4 w-4" />
                       </Button>

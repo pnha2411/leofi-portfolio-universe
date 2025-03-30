@@ -59,37 +59,6 @@ const FeaturesSection = () => {
             </Card>
           ))}
         </div>
-
-        <div className="mt-20 bg-card/30 backdrop-blur-sm border border-gray-800 rounded-lg p-8 md:p-10 slide-up">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                <span className="gradient-text">Seamless Experience</span> Across All Products
-              </h3>
-              <p className="text-gray-300 mb-6">
-                Our products are designed to work together, creating a unified financial ecosystem that simplifies your financial life.
-              </p>
-              <ul className="space-y-3">
-                {["Single sign-on for all products", "Shared data across platforms", "Consistent user interface", "Synchronized updates"].map((item, i) => (
-                  <li key={i} className="flex items-center">
-                    <CheckCircle className="h-5 w-5 text-leofi-orange mr-2" />
-                    <span className="text-gray-200">{item}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-leofi-gradient rounded-lg blur opacity-20"></div>
-              <div className="relative bg-card rounded-lg overflow-hidden border border-gray-800">
-                <img 
-                  src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
-                  alt="Seamless Experience" 
-                  className="w-full h-64 object-cover object-center opacity-80"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

@@ -2,29 +2,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { User, Briefcase, Award } from "lucide-react";
 
-const team = [
-  {
-    name: "Sarah Johnson",
-    role: "CEO & Founder",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-  },
-  {
-    name: "Michael Chen",
-    role: "CTO",
-    image: "https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-  },
-  {
-    name: "Elena Rodriguez",
-    role: "Product Director",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-  },
-  {
-    name: "David Kim",
-    role: "Lead Developer",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-  }
-];
-
 const AboutSection = () => {
   return (
     <section id="about" className="py-16 md:py-24">
@@ -38,7 +15,7 @@ const AboutSection = () => {
           </p>
         </div>
 
-        <div className="mb-16 slide-up">
+        <div className="slide-up">
           <div className="text-center max-w-3xl mx-auto mb-10">
             <h3 className="text-2xl font-bold mb-4">
               <span className="gradient-text">Our Values</span>
@@ -81,33 +58,6 @@ const AboutSection = () => {
                 </p>
               </CardContent>
             </Card>
-          </div>
-        </div>
-
-        <div className="slide-up">
-          <div className="text-center max-w-3xl mx-auto mb-10">
-            <h3 className="text-2xl font-bold mb-4">
-              <span className="gradient-text">Leadership Team</span>
-            </h3>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="relative mb-4 inline-block">
-                  <div className="absolute -inset-1 bg-leofi-gradient rounded-full blur opacity-10"></div>
-                  <div className="relative h-40 w-40 mx-auto rounded-full overflow-hidden border border-white/10">
-                    <img 
-                      src={member.image} 
-                      alt={member.name} 
-                      className="h-full w-full object-cover"
-                    />
-                  </div>
-                </div>
-                <h4 className="text-xl font-semibold text-white">{member.name}</h4>
-                <p className="text-leofi-orange">{member.role}</p>
-              </div>
-            ))}
           </div>
         </div>
       </div>
